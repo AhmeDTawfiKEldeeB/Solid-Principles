@@ -102,7 +102,7 @@ As the system grows, the class begins handling multiple responsibilities.
 We will see why this makes the code harder to maintain and how separating
 responsibilities makes the design cleaner.
 
-📁 **Chapter Readme**: [solid_principles/single_responsibility/README.md](solid_principles/single_responsibility/README.md)
+📁 **Chapter Readme**: [here](solid_principles/single_responsibility/README.md)
 
 ### 02 — Open/Closed Principle
 
