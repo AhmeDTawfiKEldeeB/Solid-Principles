@@ -1,6 +1,6 @@
-# Single Responsibility Principle (SRP)
+<h1 align="center">🎯 Single Responsibility Principle (SRP)</h1>
 
-## What is the Single Responsibility Principle?
+<h2 align="center">📖 What is the Single Responsibility Principle?</h2>
 
 The **Single Responsibility Principle (SRP)** is the first principle of SOLID.
 
@@ -19,7 +19,7 @@ change when requirements evolve.
 
 ---
 
-## Why Do We Need SRP?
+<h2 align="center"> Why Do We Need SRP?</h2>
 
 A class can start small and still look perfectly fine.
 
@@ -39,7 +39,8 @@ to understand.
 
 SRP helps us prevent this by keeping responsibilities separated.
 
-----------
+---
+
 So,Imagine that we are building a simple **banking system**.
 
 The bank currently has many customers, and each customer has a
@@ -129,7 +130,7 @@ The program is working perfectly,no problems at all. So what's the problem now?
 
 
 
-## So, What's the Problem?
+<h2 align="center">⚠️ So, What's the Problem?</h2>
 
 The important thing to understand here is that the problem is **not** that
 the program is producing incorrect results.
@@ -170,11 +171,11 @@ BankAccount
 
 Now the BankAccount class has more than one responsibility.
 
-### The SRP Violation
+<h3 align="">🚨 The SRP Violation</h3>
 
 Let's look at the two new methods we added.
 
-#### `calculate_interest()`
+<h4 align="">⚙️ <code>calculate_interest()</code></h4>
 
 ```python
 def calculate_interest(self):
@@ -191,7 +192,7 @@ If the bank changes the interest calculation rules, for example:
 
 we would need to modify the BankAccount class.
 
-#### `to_json()`
+<h4 align="">📄 <code>to_json()</code></h4>
 
 ```python
 def to_json(self):
@@ -211,7 +212,7 @@ If the way we represent the account changes, for example:
 
 we would also need to modify the BankAccount class.
 
-### Multiple Reasons to Change
+<h3 align="">🔀 Multiple Reasons to Change</h3>
 
 This means that our BankAccount class now has several different reasons
 to change.
@@ -242,7 +243,7 @@ Our BankAccount class currently has multiple reasons to change.
 
 Therefore, it violates the Single Responsibility Principle.
 
-### Why Is This a Problem?
+<h3 align="c"> Why Is This a Problem?</h3>
 
 At the moment, the class is still small, so the problem may not seem serious.
 
@@ -280,7 +281,7 @@ This makes the code harder to maintain.
 A change in one responsibility can also affect code related to another
 responsibility, making the system more difficult to understand and test.
 
-### The Better Approach
+<h3 align="center">💡 The Better Approach</h3>
 
 Instead of making BankAccount responsible for everything, we can separate
 these responsibilities into different classes.
@@ -306,7 +307,7 @@ Now each class has a clear responsibility and a clear reason to change.
 The BankAccount will focus on the account itself, while other classes will
 handle functionality that does not belong to its core responsibility.
 
-### Before Refactoring
+<h3 align=""> Before Refactoring</h3>
 
 Our current design looks like this:
 
@@ -328,7 +329,7 @@ sure the behavior remains the same.
 
 
 
-## Refactoring the Design
+<h2 align="">🛠️ Refactoring the Design</h2>
 
 Now that we understand the problem, we can refactor the design.
 
@@ -360,7 +361,7 @@ AccountFormatter
 └── Data formatting
 ```
 
-### Step 1 — Keep BankAccount Focused
+<h3 align=""> Step 1 — Keep BankAccount Focused</h3>
 
 The BankAccount class is now responsible only for managing the account.
 
@@ -383,7 +384,7 @@ data.
 
 Its responsibility is simply managing the account.
 
-### Step 2 — Move Interest Calculation
+<h3 align=""> Step 2 — Move Interest Calculation</h3>
 
 We create a separate InterestCalculator class.
 
@@ -399,7 +400,7 @@ Now, the interest calculation has its own responsibility.
 If the bank changes the way interest is calculated, we can modify
 InterestCalculator without changing BankAccount.
 
-### Step 3 — Move Data Formatting
+<h3 align=""> Step 3 — Move Data Formatting</h3>
 
 We also create a separate AccountFormatter class.
 
@@ -419,7 +420,7 @@ BankAccount.
 If the format changes, we can modify AccountFormatter without changing
 the account management logic.
 
-### The Refactored Design
+<h3 align=""> The Refactored Design</h3>
 
 Our complete implementation is now:
 
@@ -452,7 +453,7 @@ class AccountFormatter:
         }
 ```
 
-### Updating the Main Function
+<h3 align="c"> Updating the Main Function</h3>
 
 The main function now uses the appropriate class for each responsibility.
 
@@ -488,7 +489,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### ▶️ Running the Refactored Program
+<h3 align="">▶ Running the Refactored Program</h3>
 
 After the refactoring, the behavior of the program remains the same.
 
@@ -509,9 +510,9 @@ behavior of the program.
 The program still produces the same results, but the responsibilities are
 now separated.
 
-### Before vs After
+<h3 align="center">⚖️ Before vs After</h3>
 
-#### Before
+<h4 align="center">🔴 Before</h4>
 
 The BankAccount class was responsible for several different things:
 
@@ -525,7 +526,7 @@ BankAccount
 
 This gave the class multiple reasons to change.
 
-#### After
+<h4 align="center">🟢 After</h4>
 
 The responsibilities are now separated:
 
@@ -551,7 +552,7 @@ If the interest calculation changes, we modify InterestCalculator.
 
 If the output format changes, we modify AccountFormatter.
 
-### Why Is This Better?
+<h3 align="">🌟 Why Is This Better?</h3>
 
 The refactored design makes the code easier to maintain.
 
@@ -578,7 +579,7 @@ the account management logic.
 
 This separation makes the system easier to understand, maintain, and test.
 
-### Thumb Rules
+<h3 align="">👍 Thumb Rules</h3>
 
 Some practical rules can help identify SRP violations:
 
@@ -595,7 +596,7 @@ different concerns.
 These are useful guidelines rather than strict rules. They should be applied
 with context rather than mechanically.
 
-### Summary
+<h3 align="center">📝 Summary</h3>
 
 The Single Responsibility Principle does not mean that every class should
 be extremely small or contain only one method.
