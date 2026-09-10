@@ -68,7 +68,7 @@ Extract practical rules
 ## The Story Behind This Repository
 
 To make these principles easier to understand, this repository follows the
-development of a simple **e-commerce system**.
+development of a simple **system**.
 
 We will start with a straightforward implementation.
 
