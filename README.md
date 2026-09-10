@@ -102,7 +102,7 @@ As the system grows, the class begins handling multiple responsibilities.
 We will see why this makes the code harder to maintain and how separating
 responsibilities makes the design cleaner.
 
-📁 **Chapter Readme**: [here](solid_principles/single_responsibility/README.md)
+📁 **Chapter Readme**: [Here](solid_principles/single_responsibility/README.md)
 
 ### 02 — Open/Closed Principle
 
@@ -111,6 +111,9 @@ The store needs to support new types of products.
 We will first see how adding new behavior can force us to modify existing code,
 and then redesign the system so new behavior can be added without changing
 the existing implementation.
+
+📁 **Chapter Readme**: [Here](solid_principles/open_closed/README.md)
+
 
 ### 03 — Liskov Substitution Principle
 
