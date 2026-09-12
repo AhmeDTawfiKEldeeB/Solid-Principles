@@ -123,6 +123,8 @@ subclasses behave consistently with their base class.
 We will see what happens when a subclass violates the expectations of its
 parent and why this can lead to unexpected behavior.
 
+📁 **Chapter Readme**: [Here](solid_principles/liskov_substitution/README.md)
+
 ### 04 — Interface Segregation Principle
 
 Different products do not necessarily support the same operations.
