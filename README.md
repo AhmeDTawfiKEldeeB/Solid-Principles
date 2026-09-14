@@ -132,6 +132,8 @@ Different products do not necessarily support the same operations.
 Instead of forcing every product to implement functionality it does not need,
 we will break large interfaces into smaller, more focused ones.
 
+📁 **Chapter Readme**: [Here](solid_principles/interface_segregation/README.md)
+
 ### 05 — Dependency Inversion Principle
 
 Finally, the system starts depending on external services such as storage
