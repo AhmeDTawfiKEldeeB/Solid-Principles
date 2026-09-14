@@ -142,3 +142,5 @@ and notifications.
 We will see why directly depending on concrete implementations makes the
 system harder to change, and how abstractions and dependency injection can
 make the design more flexible.
+
+📁 **Chapter Readme**: [Here](solid_principles/dependency_inversion/README.md)
